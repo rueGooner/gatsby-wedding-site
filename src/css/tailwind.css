@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flip-countdown .card__top,
+.flip-countdown .card__bottom,
+.flip-countdown .card__back::before,
+.flip-countdown .card__back::after {
+  @apply text-dark bg-primary font-default !important;
+}
+
+.flip-countdown .card__top {
+  border-bottom: 1px solid white !important;
+}
+
+.header__link {
+  @apply font-hairline;
+  @apply px-4;
+  @apply transition;
+  @apply duration-100;
+  @apply ease-in;
+  @apply border-b-2;
+  @apply border-transparent;
+}
+
+.header__link:hover,
+[aria-current]:not([aria-current="false"]) {
+  @apply font-thin;
+  @apply text-dark;
+  @apply border-b-2;
+  @apply border-dark;
+}
